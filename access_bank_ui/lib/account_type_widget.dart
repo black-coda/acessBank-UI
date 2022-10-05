@@ -9,9 +9,9 @@ class AccountTypeWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(
-          vertical: 10.0, horizontal: 10),
-      padding:
-          const EdgeInsets.symmetric(vertical: 6.0, horizontal: 10),
+        vertical: 10.0,
+      ),
+      padding: const EdgeInsets.symmetric(vertical: 6.0, horizontal: 10),
       height: 80,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
@@ -24,8 +24,7 @@ class AccountTypeWidget extends StatelessWidget {
               Text(
                 "Target Savings accounts",
                 style: TextStyle(
-                    fontSize: 15.7,
-                    color: Color.fromARGB(255, 64, 103, 158)),
+                    fontSize: 15.7, color: Color.fromARGB(255, 64, 103, 158)),
               ),
             ],
           ),
@@ -43,8 +42,48 @@ class AccountTypeWidget extends StatelessWidget {
               ),
             ],
           ),
+          const SlideWidetButt(),
+          
         ],
       ),
+    );
+  }
+}
+
+
+
+
+
+
+class SlideWidetButt extends StatelessWidget {
+  const SlideWidetButt({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          height: 10,
+          width: 15,
+          decoration: BoxDecoration(
+              color: Colors.orange[900],
+              borderRadius:
+                  const BorderRadius.all(Radius.elliptical(5, 3))),
+        ),
+        const SizedBox(
+          width: 3.0,
+        ),
+        Container(
+          height: 10,
+          width: 10,
+          decoration: const BoxDecoration(
+              color: Colors.orangeAccent,
+              borderRadius: BorderRadius.all(Radius.elliptical(3, 3))),
+        ),
+      ],
     );
   }
 }

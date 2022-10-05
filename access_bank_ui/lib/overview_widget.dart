@@ -1,3 +1,5 @@
+// ignore_for_file: use_full_hex_values_for_flutter_colors
+
 import 'package:flutter/material.dart';
 
 class OverviewWidget extends StatelessWidget {
@@ -9,9 +11,9 @@ class OverviewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(
-          vertical: 10.0, horizontal: 10),
-      padding:
-          const EdgeInsets.symmetric(vertical: 18, horizontal: 20),
+        vertical: 10.0,
+      ),
+      padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 20),
       // height: 150,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
@@ -24,8 +26,7 @@ class OverviewWidget extends StatelessWidget {
             children: const [
               Text(
                 "Overview",
-                style: TextStyle(
-                    fontSize: 15.7, fontWeight: FontWeight.w600),
+                style: TextStyle(fontSize: 15.7, fontWeight: FontWeight.w600),
               ),
               Padding(padding: EdgeInsets.symmetric(vertical: 10)),
               ItemList(
@@ -44,8 +45,10 @@ class OverviewWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: const [
-                  Icon(
-                    Icons.arrow_downward_sharp,
+                  IconButton(
+                    padding: EdgeInsets.all(0),
+                    onPressed: null,
+                    icon: Icon(Icons.arrow_drop_down_sharp),
                     color: Color.fromARGB(255, 64, 103, 158),
                   )
                 ]),
@@ -92,7 +95,7 @@ class Bullet extends StatelessWidget {
       height: 8.0,
       width: 8.0,
       decoration: const BoxDecoration(
-        color: Color(0xfffF16101),
+        color: Color(0xffff16101),
         shape: BoxShape.circle,
       ),
     );
