@@ -9,7 +9,7 @@ class AccountBalanceWidget extends StatefulWidget {
 
 class _AccountBalanceWidgetState extends State<AccountBalanceWidget> {
   var balance = "150,000.00";
-  var hiddenBalance = "##########";
+  var hiddenBalance = "***********";
   bool visible = true;
   bool dropDownVisible = false;
 

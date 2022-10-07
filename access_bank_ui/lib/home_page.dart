@@ -6,9 +6,6 @@ import 'account_type_widget.dart';
 import 'overview_widget.dart';
 import 'grid_item.dart';
 
-
-
-
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
 
@@ -19,9 +16,10 @@ class Homepage extends StatelessWidget {
         slivers: [
           // AppBar in Slivers
           SliverAppBar(
-            backgroundColor: const Color(0xfff01276E),
+            backgroundColor: const Color.fromARGB(255, 64, 103, 158),
             expandedHeight: 110,
             leading: Image.asset("assets/images/logo.png"),
+            centerTitle: true,
             title: const Text(
               "Monday Solomon",
               style: TextStyle(
