@@ -13,7 +13,7 @@ import 'package:access_bank_ui/home_page.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const AppWidget());
+    await tester.pumpWidget(const Homepage());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

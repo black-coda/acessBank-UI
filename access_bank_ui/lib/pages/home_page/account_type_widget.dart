@@ -9,7 +9,7 @@ class AccountTypeWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(
-        vertical: 10.0,
+        vertical: 8.0,
       ),
       padding: const EdgeInsets.symmetric(vertical: 6.0, horizontal: 10),
       height: 80,
@@ -43,17 +43,11 @@ class AccountTypeWidget extends StatelessWidget {
             ],
           ),
           const SlideWidetButt(),
-          
         ],
       ),
     );
   }
 }
-
-
-
-
-
 
 class SlideWidetButt extends StatelessWidget {
   const SlideWidetButt({
@@ -70,8 +64,7 @@ class SlideWidetButt extends StatelessWidget {
           width: 15,
           decoration: BoxDecoration(
               color: Colors.orange[900],
-              borderRadius:
-                  const BorderRadius.all(Radius.elliptical(5, 3))),
+              borderRadius: const BorderRadius.all(Radius.elliptical(5, 3))),
         ),
         const SizedBox(
           width: 3.0,

@@ -30,7 +30,7 @@ List<IconData> gridICons = [
   Icons.attach_money_sharp,
   Icons.sell,
   Icons.currency_exchange_sharp,
-  Icons.manage_history_sharp
+  Icons.manage_history_sharp,
 ];
 
 class DataChoice {
@@ -42,7 +42,7 @@ class DataChoice {
   });
 }
 
-List<DataChoice> gridChoices = [
+List<DataChoice> gridChoices = <DataChoice>[
   DataChoice(
     text: gridText[0],
     icon: gridICons[0],
