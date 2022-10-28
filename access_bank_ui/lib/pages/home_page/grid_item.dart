@@ -6,7 +6,7 @@ int index = 4;
 List<String> gridText = [
   "Reward & Referral",
   'POS fast pay',
-  "Acess transfers",
+  "Access transfers",
   'Other banks transfer',
   "Mobile transfer",
   "Data purchase",
@@ -93,66 +93,3 @@ List<DataChoice> gridChoices = <DataChoice>[
   ),
 ];
 
-class GridDatas extends StatelessWidget {
-  const GridDatas({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return GridView.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 4,
-        crossAxisSpacing: 4.0,
-        mainAxisSpacing: 4.0,
-      ),
-      itemCount: gridChoices.length,
-      itemBuilder: (BuildContext context, int index) {
-        return Container(
-          padding: const EdgeInsets.all(8.0),
-          decoration: const BoxDecoration(
-            color: Color.fromARGB(255, 64, 103, 158),
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-          ),
-          child: Expanded(
-            child: Column(
-              // mainAxisAlignment: MainAxisAlignment.center,
-              // crossAxisAlignment: CrossAxisAlignment.center,
-
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Icon(
-                      gridChoices[index].icon,
-                      color: Colors.white,
-                      size: 28,
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      gridText[index],
-                      // overflow: TextOverflow.cli,
-                      maxLines: 2,
-                      style: const TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.white,
-                      ),
-                    )
-                  ],
-                ),
-              ],
-            ),
-          ),
-        );
-      },
-    );
-  }
-}

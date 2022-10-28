@@ -1,4 +1,6 @@
 // ignore_for_file: use_full_hex_values_for_flutter_colors
+import 'package:access_bank_ui/pages/profile/profile_.dart';
+
 import 'pages/menu_page/menu_page.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +17,7 @@ class _HomepageState extends State<Homepage> {
   final List<Widget> _page = const [
     MainBodyWidget(),
     MenuWidget(),
-    MainBodyWidget()
+    ProfileWidget(),
   ];
 
   int _selectedIndex = 0;
@@ -29,6 +31,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: const Color(0xffE5E9F3),
       body: _page[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         elevation: 60,

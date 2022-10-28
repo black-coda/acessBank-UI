@@ -15,11 +15,12 @@ class MainBodyWidget extends StatelessWidget {
     return CustomScrollView(
       slivers: [
         // AppBar in Slivers
-        SliverAppBar(
+        SliverAppBar.large(
           backgroundColor: const Color.fromARGB(255, 64, 103, 158),
-          expandedHeight: 90,
+          // expandedHeight: 200,
           leading: Image.asset("assets/images/logo.png"),
           centerTitle: true,
+          stretch: true,
           title: const Text(
             "Monday Solomon",
             style: TextStyle(
@@ -52,7 +53,7 @@ class MainBodyWidget extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                rowFavoritte(),
+                rowFavorite(),
               ],
             ),
           ),
@@ -71,47 +72,35 @@ class MainBodyWidget extends StatelessWidget {
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, index) {
                 return Container(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(12.0),
                   decoration: const BoxDecoration(
                     color: Color.fromARGB(255, 64, 103, 158),
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                   ),
                   child: Column(
-                    // mainAxisAlignment: MainAxisAlignment.center,
-                    // crossAxisAlignment: CrossAxisAlignment.center,
-
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Icon(
-                            gridChoices[index].icon,
-                            color: Colors.white,
-                            size: 28,
-                          ),
-                        ],
+                      Icon(
+                        gridChoices[index].icon,
+                        color: Colors.white,
+                        size: 25,
                       ),
                       const SizedBox(
-                        height: 15,
+                        height: 5,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            child: Text(
-                              gridText[index],
-                              // overflow: TextOverflow.cli,
-                              // maxLines: 2,
-                              style: const TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.white,
-                              ),
-                            ),
-                          )
-                        ],
+                      Expanded(
+                        child: Text(
+                          gridText[index],
+                          overflow: TextOverflow.ellipsis,
+                          textAlign: TextAlign.center,
+                          maxLines: 2,
+                          style: const TextStyle(
+                            fontSize: 11.5,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -126,7 +115,7 @@ class MainBodyWidget extends StatelessWidget {
   }
 }
 
-Row rowFavoritte() {
+Row rowFavorite() {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
