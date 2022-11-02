@@ -18,7 +18,7 @@ UI for Access bank mobile App
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+First Complete UI in Flutter.
 
 A few resources to get you started if this is your first Flutter project:
 
